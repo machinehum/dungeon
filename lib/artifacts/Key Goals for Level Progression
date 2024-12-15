@@ -1,0 +1,64 @@
+Key Goals for Level Progression
+Steady Growth: Players feel rewarded at each level, but not overpowered.
+Thematic Depth: Progression aligns with the kinship and class, reinforcing narrative and gameplay identity.
+Meaningful Customization: Players make impactful choices that differentiate their characters.
+Progression Framework
+1. Level Cap
+
+20 Levels: A traditional cap that aligns well with the 1–20 stat scale and offers meaningful milestones.
+2. Points Per Level
+
+2 Characteristic Points per Level:
+Players earn points to distribute to characteristics at each level, allowing steady growth.
+Total Points by Level 20: 40 additional points, which roughly doubles a starting kinship’s total (~60–62).
+3. Milestones for Major Gains
+
+Certain levels should grant special bonuses or abilities, adding flavor and excitement beyond just stat increases. For example:
+
+Level 5: Unlock a minor class-specific ability or passive bonus.
+Level 10: Gain a significant class-specific upgrade or kinship trait enhancement.
+Level 15: Unlock a new, advanced ability tied to the character’s class or a stat threshold.
+Level 20: Gain a capstone ability, representing mastery of the character’s class or lineage.
+4. Stat Growth Rules
+
+Stat Caps:
+Any characteristic cannot exceed 20, maintaining balance and thematic alignment.
+Kinships with "higher minimums" (e.g., Goliaths with 12 Strength) still cap at 20, preventing them from becoming overpowered.
+Scaling Costs (Optional):
+To prevent stacking all points into one stat, consider making higher values more costly:
+Raising a stat from 1–10: 1 point per level.
+Raising a stat from 11–15: 2 points per level.
+Raising a stat from 16–20: 3 points per level.
+5. Class-Based Progression Bonuses
+
+Classes should shape how progression feels and play into a character's thematic strengths:
+
+Knights: Gain a passive Bravery or Strength bonus every 5 levels.
+Feybinders: Bonuses tied to Arcadia or Connectedness as they master fae magic.
+Shadowblades: Incremental increases in Cunning or Speed to reflect their stealth and agility.
+6. Experience Points (XP) and Leveling
+
+Use a scaling XP system to slow down progress at higher levels, maintaining the challenge and longevity of the game.
+Example XP Curve:
+Level 1–5: Low XP requirements for early, fast progression.
+Level 6–15: Moderate XP scaling.
+Level 16–20: Steep XP scaling to make reaching the cap an achievement.
+Introduce non-combat XP rewards, such as for roleplay, exploration, or solving puzzles, to balance different playstyles.
+7. Optional Systems for Depth
+
+Stat Threshold Unlocks: High characteristics unlock unique abilities or benefits.
+Example: 16+ Arcadia lets a Druid summon more powerful creatures.
+Class and Kinship Synergy: Reaching milestones in class-specific stats could enhance kinship traits.
+Example: A Goliath with 15+ Bravery gains additional resistance to fear effects.
+Example Progression Table
+Level	Stat Points	Milestone	XP Required
+1	Starting Values	Default Class/Kinship Traits	0 (Starting XP)
+2–4	+2 per Level	-	Low XP (Quick)
+5	+2	Unlock Minor Class Ability	Moderate XP
+6–9	+2 per Level	-	Moderate XP
+10	+2	Major Class Upgrade	High XP
+11–14	+2 per Level	-	High XP
+15	+2	Unlock Advanced Ability	Steep XP
+16–19	+2 per Level	-	Very Steep XP
+20	+2	Capstone Ability or Bonus	Max XP
+This system provides a balanced blend of growth, customization, and excitement as players level up. Would you like to explore specific milestones or abilities for particular classes or kinships?

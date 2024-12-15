@@ -1,0 +1,8 @@
+<h2 class="border-b mb-2 border-gray-600">Equipped</h2>
+<ul id="equipped">
+<% unless @equipped_items.blank? %>
+  <% @equipped_items.each do |i| %>
+    <%= render 'inventory_item', i: i %>
+  <% end %>
+<% end %>
+</ul>

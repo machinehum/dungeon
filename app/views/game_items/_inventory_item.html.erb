@@ -1,0 +1,13 @@
+<li id="game_item_<%= i.id %>" class="p-4 mb-4 border-2 border-slate-500 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+  <p class="mb-1 font-bold"><%= i.label %></p>
+  <% if i.equipped %>
+    <%= button_to "Stow", [@game, i], params: {game_item: {equipped: false}}, 
+        form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
+  <% else %>
+    <%= button_to "Equip", [@game, i], params: {game_item: {equipped: true}}, 
+            form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
+  <% end %>
+  <%= button_to "Drop", [@game, i], params: {game_item: {player_id: nil, node_id: @game.game_node.id, equipped: false}}, 
+      form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
+  
+</li>

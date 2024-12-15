@@ -1,0 +1,93 @@
+Class progression is vital to ensuring each class feels distinct and thematic while providing exciting milestones and abilities as characters level up. Here’s a breakdown of how progression might work for each class in your game, tied to their themes and gameplay mechanics:
+
+General Class Progression Framework
+Core Abilities: Each class begins with a defining ability or feature that sets them apart.
+New Abilities at Milestones: Major upgrades or unique abilities are granted at key levels (e.g., 5, 10, 15, 20).
+Scaling Abilities: Early abilities improve or evolve as the character levels, staying relevant throughout the game.
+Stat-Based Perks: Certain abilities or upgrades unlock based on reaching stat thresholds (e.g., 15+ Arcadia for Druids).
+Customizability: Players may choose from multiple upgrades at certain levels, allowing them to specialize within their class.
+Class-Specific Progression
+
+1. Bard
+Core Theme: Inspires allies, manipulates emotions, and influences the battlefield through music and storytelling.
+Primary Stats: Connectedness, Cunning.
+Progression:
+Level 1: Inspiring Song: Boosts ally morale (increases Bravery or Speed temporarily).
+Level 5: Ballad of Resilience: Grants temporary healing or resistance to a single ally.
+Level 10: Echo of Legends: Unlocks the ability to summon a spectral representation of a heroic figure for aid in battle.
+Level 15: Symphony of the Otherworld: Allows the Bard to manipulate the environment (e.g., calming enemies or enhancing allies).
+Level 20: Finale: A once-per-day ability that boosts all allies’ stats significantly for a limited time.
+
+2. Druid
+Core Theme: Master of nature and shapeshifting, commanding primal forces to heal or harm.
+Primary Stats: Arcadia, Connectedness.
+Progression:
+Level 1: Wildshape: Transform into a small animal for scouting or evasion.
+Level 5: Summon Nature’s Ally: Call forth a creature (e.g., wolf or hawk) to fight alongside you.
+Level 10: Elemental Wrath: Harness natural elements (fire, water, wind, etc.) for powerful area-of-effect attacks.
+Level 15: Greater Wildshape: Transform into a larger, combat-ready animal (e.g., bear or stag).
+Level 20: Avatar of the Wild: Temporarily become a massive, elemental creature with enhanced stats and abilities.
+
+3. Knight
+Core Theme: Armored defender and battlefield leader, protecting allies and controlling the frontlines.
+Primary Stats: Bravery, Strength.
+Progression:
+Level 1: Shield Block: Reduce incoming damage for yourself or an ally.
+Level 5: Rallying Cry: Boosts all nearby allies’ Bravery and Strength.
+Level 10: Guardian Stance: Automatically intercept attacks targeting nearby allies.
+Level 15: Indomitable Will: Immunity to fear effects and ability to resist mind-control magic.
+Level 20: Aegis of the Realm: Temporarily become immune to damage and significantly boost nearby allies’ defenses.
+
+4. Feybinder
+Core Theme: Wielder of fae magic, summoning otherworldly allies and enchanting foes.
+Primary Stats: Arcadia, Connectedness.
+Progression:
+Level 1: Fey Summon: Call a minor faerie ally (e.g., a sprite) for aid.
+Level 5: Illusory Glamour: Create powerful illusions to confuse or misdirect enemies.
+Level 10: Fey Pact: Form a bond with a powerful fae entity, granting bonuses and unique abilities.
+Level 15: Gossamer Veil: Step briefly into the Otherworld to evade attacks or reposition.
+Level 20: Court’s Favor: Summon a major fae ally (e.g., a Sidhe lord or forest spirit) for significant aid in battle.
+5. Wild Huntsman
+
+Core Theme: Tracker and ranged fighter with a deep connection to the wilderness.
+Primary Stats: Speed, Cunning.
+Progression:
+Level 1: Hunter’s Mark: Mark an enemy, gaining bonuses to damage and tracking them.
+Level 5: Companion Bond: Gain a loyal animal companion (e.g., a hound or hawk).
+Level 10: Volley: Launch a powerful, multi-target ranged attack.
+Level 15: Call of the Hunt: Temporarily summon spectral hounds or allies to aid in battle.
+Level 20: Master of the Hunt: Gain significant bonuses to tracking, ranged attacks, and summon a powerful stag or beast ally.
+
+6. Witch
+Core Theme: Brew potions, cast curses, and manipulate the mystical forces of life and death.
+Primary Stats: Knowledge, Healing.
+Progression:
+Level 1: Hex: Apply a curse to weaken an enemy’s stats or abilities.
+Level 5: Potion Crafting: Create powerful potions for healing, buffs, or poisons.
+Level 10: Spirit Binding: Summon or control spirits to fight or aid you.
+Level 15: Life Leech: Drain health from enemies to heal yourself or allies.
+Level 20: Eternal Hex: A once-per-day, permanent debilitation curse on a single enemy.
+
+7. Skald
+Core Theme: Warrior-poet, inspiring allies and excelling in combat through words and deeds.
+Primary Stats: Bravery, Connectedness.
+Progression:
+Level 1: Battle Chant: Boost Strength or Speed of nearby allies.
+Level 5: Saga of Valor: Temporarily grant resistance to fear or magical effects.
+Level 10: Warrior’s Dirge: Intimidate enemies, reducing their Bravery.
+Level 15: Echoing Call: Extend the duration or range of your chants and abilities.
+Level 20: Legend’s Refrain: Permanently enhance allies’ stats during battle.
+
+8. Shadewalker
+Core Theme: Agile assassin and stealth specialist, excelling in mobility and precision.
+Primary Stats: Speed, Cunning.
+Progression:
+Level 1: Backstab: Bonus damage when attacking from stealth.
+Level 5: Shadowmeld: Temporarily become invisible in dim light.
+Level 10: Phantom Step: Evade attacks by stepping briefly into the shadows.
+Level 15: Poison Mastery: Gain access to deadly toxins that weaken or kill foes.
+Level 20: Blade of the Void: Perform an unblockable, high-damage attack from stealth.
+Progression Summary
+Each class has defining abilities at key levels (5, 10, 15, 20) to keep gameplay fresh and exciting.
+Scaling abilities (e.g., Wildshape, Rallying Cry) improve over time to remain relevant.
+Stat synergies ensure classes feel distinct and align with their gameplay identity.

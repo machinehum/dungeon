@@ -1,0 +1,2 @@
+class Terra < ApplicationRecord
+end

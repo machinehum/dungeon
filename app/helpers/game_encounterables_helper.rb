@@ -1,0 +1,2 @@
+module GameEncounterablesHelper
+end

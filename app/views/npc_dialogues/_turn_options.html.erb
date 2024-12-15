@@ -1,0 +1,13 @@
+<% turn_options.each.with_index(1) do |o,index| %>
+  <li class='clear-start float-start mb-8'>
+    <%= button_to index, [game,o.next_dialogue], method: :get, 
+      form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
+        <%= o.response_text %> 
+  </li>
+<% end %>
+
+<li class='clear-start float-start mb-8'>
+  <%= button_to "L", [game, @game_encounterable], params: { game_encounterable: {seen: true}}, method: :patch, 
+    form_class: 'inline-block mr-3', class: 'btn-primary' %> 
+      Leave and continue on your way. 
+</li>

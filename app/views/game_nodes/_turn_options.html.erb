@@ -1,0 +1,7 @@
+<% turn_options.each.with_index(1) do |o,index| %>
+  <li class='clear-start float-start mb-8'>
+    <%= button_to index, game_move_path(game), params: {game: {id: game.id, portal: o}}, 
+      form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_frame: '_top'} %> 
+        <%= o.description %> (<%= o.edge.description %>)
+  </li>
+<% end %>

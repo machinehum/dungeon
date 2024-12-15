@@ -1,0 +1,8 @@
+<%= turbo_stream.remove("game_item_#{@game_item.id}") %>
+<% if @was_equipped %>
+  <%= turbo_stream.append "equipped", partial: "inventory_item", locals: { i: @game_item } %>
+<% elsif @was_stowed %>
+  <%= turbo_stream.append "stowed", partial: "inventory_item", locals: { i: @game_item } %>
+<% end %>
+
+<%= turbo_stream.update "advisory_pane", partial: "shared/advisory", locals: { notice: flash.notice } %> 

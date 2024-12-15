@@ -1,0 +1,3 @@
+<%= turbo_stream.update "description_pane", partial: "look_around", locals: { game: @game, encounterables: @encounterables } %>
+<%= turbo_stream.update "image_pane", partial: "game/image", locals: { game: @game} %>
+<%= turbo_stream.update "interaction_pane", partial: "encounterable_choices", locals: { game: @game, turn_options: @turn_options, encounterables: @encounterables, preface: @turn_preface } %> 

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-1 px-3 bg-sky-700 text-white font-semibold rounded shadow-md hover:bg-amber-700 focus:outline-none focus:ring focus:ring-amber-400 focus:ring-opacity-75;
+  }
+  .pane {
+  	@apply mx-2 mt-4 p-4 border-2 border-slate-500 ring-4 ring-offset-4 ring-slate-500;
+  }
+  .pane.description {
+  }
+  .pane > * {
+  	 	animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }      
+  }
+
+  .gameport {   
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 30px;
+    width: 800px;
+    margin: auto;
+  }
+}

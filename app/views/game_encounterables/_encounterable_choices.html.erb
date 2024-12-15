@@ -1,0 +1,20 @@
+<p class="mb-5">
+  Which would you like to approach? 
+</p>
+<div class="turn-object-options">
+  <ol>
+    <% encounterables.each.with_index(1) do |o,index| %>
+      <li class='clear-start float-start mb-8'>
+        <%= button_to index, [game, o], 
+          form_class: 'inline-block mr-3', class: 'btn-primary', method: :get, data: {turbo_stream: true} %> 
+            <%= o.label %> 
+      </li>
+    <% end %>
+    <li class='clear-start float-start mb-8'>
+      <%= button_to "N", @game,
+        form_class: 'inline-block mr-3', class: 'btn-primary' %> 
+          None. 
+    </li>
+  </ol>
+</div>
+<div class="clear-both"></div>

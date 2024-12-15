@@ -1,0 +1,13 @@
+<li class='clear-start float-start mb-8'>
+  <%= button_to "G", game_npc_dialogue_path(game, turn_object.dialogue), params: { game_encounterable: {} }, method: :get, 
+    form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
+      Greet <%= turn_object.label %>
+</li>
+
+<% unless turn_object.assertive && !turn_object.seen %>
+  <li class='clear-start float-start mb-8'>
+    <%= button_to "L", @game, method: :get, 
+      form_class: 'inline-block mr-3', class: 'btn-primary' %> 
+        Leave and continue on your way. 
+  </li>
+<% end %>

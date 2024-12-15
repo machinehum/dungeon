@@ -1,0 +1,12 @@
+<li class='clear-start float-start mb-8'>
+  <% pi = GameItem.find_by(game: game, item: turn_object.encounterable.item) %>
+  <%= button_to "T", [game, pi], params: { game_item: { game_id: game.id, player_id: game.player.id, item_id: turn_object.encounterable.item.id } },
+    form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo: false} %> 
+      Take the "<%= turn_object.label %>".
+</li>
+
+<li class='clear-start float-start mb-8'>
+  <%= button_to "L", [game, GameEncounterable.find_by(game: game, game_node: game.game_node, encounterable_type: turn_object.class.name, encounterable_id: turn_object.id)], params: { game_encounterable: {seen: true}}, method: :put, 
+    form_class: 'inline-block mr-3', class: 'btn-primary' %> 
+      Leave and continue on your way. 
+</li>

@@ -1,0 +1,39 @@
+<div class="grid grid-cols-1 content-center">
+  <h1 class="text-center tracking-[1rem]">THROWDOWN</h1>
+</div>
+
+<div class="grid grid-cols-2">
+  <div class="pane description" id="description_pane">
+    <%= render "description", game: @game, turn_description: @turn_description %>
+  </div>
+  <div class="pane image" id="image_pane">
+    <% if @picture && @picture.filename %>
+      <%= image_tag(@picture.filename) %>
+    <% end %>
+  </div>
+</div>
+
+<div class="pane interaction" id="interaction_pane">
+  <%= render "interaction", game: @game, preface: @turn_preface, turn_options: @turn_options %>
+</div>
+
+<div class="pane advisory clear-start" id="advisory_pane">
+   <%= render 'shared/advisory' %>
+</div>
+
+<div class="pane base_options clear-start" id="base_options_pane">
+  <ul>
+    <li class='inline mr-5'>
+      <%= button_to '(S)earch', game_game_encounterables_path(@game), method: :get, params: {observable: true},
+       form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %>
+    </li>
+    <li class='inline mr-5'>
+      <%= button_to "(I)nventory", game_game_items_path(@game), method: :get,
+        form_class: 'inline-block', class: 'btn-primary' %> 
+    </li>
+    <li class='inline mr-5'>
+      <%= button_to "(C)amp", game_game_items_path(@game),
+        form_class: 'inline-block', class: 'btn-primary' %> 
+    </li>
+  </ul>
+</div>

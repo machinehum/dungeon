@@ -1,0 +1,78 @@
+Humans
+Strengths: Versatility and adaptability. Humans can succeed in any class, though they don't excel in one specific area.
+Best Classes:
+Knight: Resilient and adaptable.
+Bard: Excellent storytellers and diplomats.
+Witch: Representing the cunning folk of folklore.
+Restrictions: None. Humans’ adaptability makes them open to all classes.
+Design Note: Humans are a flexible option, ideal for players who want freedom to experiment with any class.
+
+Fae
+Strengths: Magical affinity, charisma, and agility. Fae thrive in classes that use magic or finesse but struggle with heavily physical or mundane roles.
+Best Classes:
+Feybinder: Naturally attuned to faerie magic.
+Bard: Charismatic and enchanting.
+Shadowblade: Agile and mysterious.
+Weak Classes:
+Knight: Too delicate for heavy armor and brute strength.
+Wild Huntsman: Lack the earthy pragmatism needed for survivalist skills.
+Restrictions: Cannot be Knight. The Fae’s ethereal nature conflicts with the physical discipline and chivalric ideals of this role.
+Design Note: Fae lean into their mystical and elusive nature, favoring magic and guile over brute force.
+
+Stonekin
+Strengths: Strength, endurance, and craftsmanship. Stonekin excel in physically demanding or defensive roles but are less suited to magic or subtlety.
+Best Classes:
+Knight: Durable and disciplined.
+Wild Huntsman: Rugged and resourceful.
+Skald: Blends martial skill with storytelling.
+Weak Classes:
+Feybinder: Too grounded and pragmatic for faerie magic.
+Shadowblade: Lack the speed and subtlety needed for stealth.
+Restrictions: Cannot be Feybinder. Their earthy nature clashes with the ethereal magic of the fae.
+Design Note: Stonekin embody strength and resilience, focusing on grounded, physical roles.
+
+Goliaths
+Strengths: Strength, presence, and primal connection to the land. Goliaths excel in physical roles and roles that emphasize leadership or grandeur but struggle with subtle or delicate magic.
+Best Classes:
+Knight: Their imposing presence fits perfectly.
+Wild Huntsman: Their connection to the land complements this role.
+Skald: Their natural charisma enhances their battlefield influence.
+Weak Classes:
+Bard: Lacks the finesse for artistry.
+Shadowblade: Too large and direct for stealth.
+Restrictions: Cannot be Shadowblade. Their size and nature make stealth impractical.
+Design Note: Goliaths are strong and commanding, excelling in roles where power and presence matter.
+
+Selkies
+Strengths: Water affinity, agility, and charisma. Selkies excel in roles that leverage their natural charm and connection to water but struggle with roles tied to earth or heavy combat.
+Best Classes:
+Bard: Their natural allure makes them captivating performers.
+Feybinder: Their connection to magic aligns well with fae power.
+Shadowblade: Their fluid movements make them excellent rogues.
+Weak Classes:
+Skald: Lacks the brute strength and warrior spirit.
+Druid: Their aquatic focus makes them less attuned to forests and earth.
+Restrictions: Cannot be Knight. Their fluid, sea-bound nature conflicts with the rigid structure of knighthood.
+Design Note: Selkies thrive in magical and agile roles, emphasizing their dual nature and charisma.
+
+Shadows
+Strengths: Stealth, perception, and cunning. Shadows excel in subtle, magical, or guile-based roles but struggle with physical or overtly social classes.
+Best Classes:
+Shadowblade: The quintessential stealthy assassin.
+Feybinder: Their connection to the Otherworld makes them excellent magic users.
+Witch: Their cunning and mystical nature aligns with this role.
+Weak Classes:
+Knight: Lack the physical durability and discipline.
+Skald: Their introverted nature conflicts with the boldness required.
+Restrictions: Cannot be Knight or Skald. Shadows are too elusive and enigmatic for these bold, physical roles.
+Design Note: Shadows are mysterious and subtle, excelling in roles that require stealth, magic, or cunning.
+
+Summary of Parameters:
+Kinship	Strong Classes	Weak Classes	Restricted Classes
+Humans	All	None	None
+Fae	Feybinder, Bard, Shadowblade	Knight, Wild Huntsman	Knight
+Stonekin	Knight, Wild Huntsman, Skald	Feybinder, Shadowblade	Feybinder
+Goliaths	Knight, Wild Huntsman, Skald	Bard, Shadowblade	Shadowblade
+Selkies	Bard, Feybinder, Shadowblade	Skald, Druid	Knight
+Shadows	Shadowblade, Feybinder, Witch	Knight, Skald	Knight, Skald
+This system provides thematic consistency while still allowing for creative builds. Players can embrace their kinship’s natural strengths or defy expectations with unusual combinations. Would you like to refine this further or explore traits and abilities for specific kinships?

@@ -1,0 +1,4 @@
+<%= turbo_stream.replace "description_frame", partial: "game/description", locals: { } %>
+<%= turbo_stream.replace "image_frame", partial: "game/image", locals: { node: @node } %>
+<%= turbo_stream.replace "interaction_frame", partial: "game/interaction", locals: { move_options: @move_options, encounterables: @encounterables } %>
+

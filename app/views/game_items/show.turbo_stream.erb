@@ -1,0 +1,2 @@
+<%= turbo_stream.update "description_pane", partial: "description", locals: { description_text: @turn_description } %>
+<%= turbo_stream.update "interaction_pane", partial: "interaction", locals: { game: @game, turn_options: @turn_options, encounterable: @dialogue, preface: @turn_preface } %> 

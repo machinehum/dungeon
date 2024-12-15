@@ -1,0 +1,8 @@
+<h2 class="border-b mb-2 border-gray-600">Carrying</h2>
+<ul id="stowed">
+<% unless @packed_items.blank? %>
+  <% @packed_items.each do |i| %>
+    <%= render 'inventory_item', i: i %>
+  <% end %>
+<% end %>
+</ul>
