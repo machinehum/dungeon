@@ -1,19 +1,30 @@
 class GameItem < ApplicationRecord
   belongs_to :game
   belongs_to :item
+  has_one :curse, through: :item
   belongs_to :player, optional: true
   belongs_to :game_node, optional: true
 
   has_many :game_encounterables, as: :encounterable
 
   delegate :label, to: :item
+  delegate :description, to: :item
   delegate :turn_preface, to: :item
   delegate :turn_options, to: :item
   delegate :turn_description, to: :item
   delegate :details, to: :item
   delegate :picture, to: :item
+  delegate :weight, to: :item
+
+  delegate :armor_modifier, to: :item
+  delegate :hit_modifier, to: :item
+  delegate :spell_modifier, to: :item
+  delegate :swing_count, to: :item
+  delegate :hit_damage, to: :item
 
   before_update :encounterable_availability
+
+  scope :equipped, -> { where(equipped: true) }
 
   private
 

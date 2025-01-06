@@ -1,0 +1,67 @@
+<div class="text-neutral-100">
+  <p class="mb-3"> 
+    Hello! Your user account <strong><%= Current.user.email_address %></strong> does not have a character yet. Let's take care of that.
+  </p>
+
+  <p class="mb-3">
+    For now you can only have one character per user. That will probably change in the future. If your character bites the dust, contact your friendly
+    local admin and enquire about resurrection services at reasonable rates!
+  </p>
+</div>
+
+<div class="grid grid-cols-2 text-neutral-100">
+
+  <%= form_with model: @player do |form| %>
+    <div class="m-5 p-3 border-2 border-amber-500 ring-4 ring-slate-500">
+      <%= form.label :name, class: "block mb-2" %>
+      <%= form.text_field :name, required: true, autofocus: true, placeholder: "A name for your character", class: "w-full p-1 text-slate-800" %><br>
+    </div>
+
+    <div class="m-5 p-3 border-2 border-amber-500 ring-4 ring-slate-500">
+      <%= form.label :description, class: "block mb-2" %>
+      <%= form.textarea :description, required: true, placeholder: "A brief description of your character", class: "w-full p-1 text-slate-800" %><br>
+    </div>
+
+    <div class="m-5 p-3 border-2 border-amber-500 ring-4 ring-slate-500">
+      <%= form.label :kinship, class: "block mb-2"  %>
+      <%= form.collection_select :kinship_id, Kinship.order(:label), :id, :label, {}, { class: "w-full p-1 text-slate-800" } %>
+      <p class="text-sm">"Kinship" is what many RPGs call "Race"... not a great term for it. Look to your right for a overview of 
+      the kinships.</p>
+    </div>
+
+    <div class="m-5 p-3 border-2 border-amber-500 ring-4 ring-slate-500">
+      <%= form.label :character_class, class: "block mb-2"  %>
+      <%= form.collection_select :character_class_id, CharacterClass.order(:label), :id, :label, {}, { class: "w-full p-1 text-slate-800" }  %>
+      <p class="text-sm">Look to your right for a overview of the character classes.</p>
+    </div>
+
+    <%= form.submit "Save this and roll your stats...", class: "m-5 p-3 border-2 border-amber-500 ring-4 ring-slate-500" %>
+
+  <% end %>
+
+  <div class="m-4"> 
+    <div class="mb-4 p-4 border-2">
+      <h2>Kinships</h2>
+      <hr>
+      <ul>
+        <% Kinship.all.each do |k| %>
+          <li>
+            <strong><%= k.label %></strong> - <span class="text-sm"><%= k.description %></span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="mt-6 p-4 border-2">
+      <h2>Character Classes</h2>
+      <hr>
+      <ul>
+        <% CharacterClass.all.each do |k| %>
+          <li>
+            <strong><%= k.label %></strong> - <span class="text-sm"><%= k.description %></span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

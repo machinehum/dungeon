@@ -1,0 +1,3 @@
+<%= turbo_stream.update "description_pane", partial: "description", locals: { shop_item: @shop_item } %>
+<%= turbo_stream.update "image_pane", partial: "image", locals: { shop_item: @shop_item } %>
+<%= turbo_stream.update "interaction_pane", partial: "interaction", locals: { shop_item: @shop_item, player: @player } %>

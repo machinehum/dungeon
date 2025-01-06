@@ -1,0 +1,16 @@
+<div class="turn-object-options">
+  <ul>
+    <li class='inline mr-5'>
+      <%= button_to '(A)ttack', [@game, @combat], method: :patch, params: {attack: true},
+       form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %>
+    </li>
+    <li class='inline mr-5'>
+      <%= button_to "(P)arry", game_game_items_path(@game), method: :get,
+        form_class: 'inline-block', class: 'btn-primary' %> 
+    </li>
+    <li class='inline mr-5'>
+      <%= button_to "(R)un", run_game_combat_path(@game, @combat), method: :get,
+        form_class: 'inline-block', class: 'btn-primary' %> 
+    </li>
+  </ul>
+</div>

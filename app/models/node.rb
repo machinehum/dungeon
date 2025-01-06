@@ -7,6 +7,7 @@ class Node < ApplicationRecord
   has_many :nodes, through: :edges
 
   delegate :description, to: :locatable
+  delegate :label, to: :locatable
 
   def neighbors
     nodes.where.not(id: self.id)
@@ -17,7 +18,7 @@ class Node < ApplicationRecord
   end
 
   def turn_description
-    description
+    "You see " + description
   end
 
   def turn_preface

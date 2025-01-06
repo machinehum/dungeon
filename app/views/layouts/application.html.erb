@@ -25,6 +25,11 @@
 
   <body>
     <div class="gameport">
+      <% if @game&.player&.game_companion %>
+        <%= link_to [@game, @game.player.game_companion] do %>
+          <%= image_tag(@game.player.game_companion.icon.filename, class: "absolute top-5 right-8") %>
+        <% end %>
+      <% end %>
       <%= yield %>
     </div>
   </body>

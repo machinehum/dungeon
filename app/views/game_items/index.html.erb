@@ -10,12 +10,18 @@
   </div>
 </div>
 
-<%# <div class="pane interaction" id="interaction_pane">
-  
+<div class="pane interaction" id="interaction_pane">
+  <span class="float-start">
+    Carrying: <%= @game.player.current_load %> lbs. out of <%= @game.player.load_limit %> lbs.
+  </span>
+  <span class="float-end">
+    Health: <%= @game.player.health %>. Gold: <%= @game.player.gold %>. XP: <%= @game.player.xp %>.
+  </span>
+  <span class="clear-start">&nbsp;</span>
 </div>
- %>
+
 <div class="pane advisory clear-start" id="advisory_pane">
-  <%= render 'shared/advisory' %>
+  <%= render 'shared/advisory', locals: { notice: flash.notice } %>
 </div>
 
 <div class="pane base_options clear-start" id="base_options_pane">

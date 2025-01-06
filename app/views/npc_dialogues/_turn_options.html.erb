@@ -7,7 +7,7 @@
 <% end %>
 
 <li class='clear-start float-start mb-8'>
-  <%= button_to "L", [game, @game_encounterable], params: { game_encounterable: {seen: true}}, method: :patch, 
+  <%= button_to "L", [game, ge], params: { game_encounterable: {seen: true}}, method: :patch, 
     form_class: 'inline-block mr-3', class: 'btn-primary' %> 
       Leave and continue on your way. 
 </li>

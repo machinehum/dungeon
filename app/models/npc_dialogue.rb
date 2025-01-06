@@ -1,5 +1,6 @@
 class NpcDialogue < ApplicationRecord
   belongs_to :npc
+  has_many :npc_responses, dependent: :destroy
 
   def class_name
     self.class.name.underscore.pluralize

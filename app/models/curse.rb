@@ -1,0 +1,2 @@
+class Curse < ApplicationRecord
+end

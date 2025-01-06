@@ -8,6 +8,22 @@ class Game < ApplicationRecord
 
   accepts_nested_attributes_for :game_encounterables
 
+  def shop?
+    if game_node && game_node.game_shop
+      return true
+    else
+      return false
+    end
+  end
+  
+  def shop
+    if game_node
+      return game_node.game_shop
+    else
+      return nil
+    end
+  end 
+
   def npc?
     if game_node
       e = observables.where(encounterable_type: 'GameNpc', active: true).exists?
@@ -46,7 +62,7 @@ class Game < ApplicationRecord
 
   def combative_npc
     if game_node
-      e = observables.includes(:encounterable).where(encounterable_type: 'GameNpc', active: true, seen: false)
+      e = observables.includes(:encounterable).where(encounterable_type: 'GameNpc', active: true)
       return e.select { |e| e.encounterable.assertive == true && e.encounterable.combatable == true}&.first&.encounterable
     else
       return nil

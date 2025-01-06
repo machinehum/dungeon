@@ -1,0 +1,13 @@
+<% if inventory.blank? %>
+  <p> ... but not today! Check back later.</p>
+<% else %>
+  <ul>
+    <% inventory.each.with_index(1) do |o,index| %>
+      <li class='clear-start float-start mb-8'>
+        <%= button_to index, [@game, @game_shop, o], method: :get, 
+        form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
+          <%= o.label %> 
+      </li>
+    <% end %>
+  </ul>
+<% end %>

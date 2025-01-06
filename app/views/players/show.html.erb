@@ -1,0 +1,9 @@
+<div class="text-neutral-100">
+    <%= @player.name %>
+    <p><%= @player.description %>
+
+<ul>
+<% Character.stats.each do |s| %>
+  <li><%= s %>: <%= @player.send(s) %></li>
+<% end %>
+</ul>

@@ -1,33 +1,13 @@
-<p>Equipped:<br>
-<% if @equipped_items.blank? %>
-  None
-<% else %>
-  <ul>
-    <% @equipped_items.each do |i| %>
-      <li class="mb-2">
-        <%= button_to "Stow", [@game, i], params: {game_item: {equipped: false}}, 
-            form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
-        <%= button_to "Drop", [@game, i], params: {game_item: {player_id: nil, node_id: @game.game_node.id, equipped: false}}, 
-            form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
-        <%= i.label %> 
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-</p>
-<hr>
-<p>Carrying:<br>
-<% if @packed_items.blank? %>
-  None
-<% else %>
-  <ul>
-    <% @packed_items.each do |i| %>
-      <li class="mb-2">
-        <%= button_to "Equip", [@game, i], params: {game_item: {equipped: true}}, 
-            form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
-        <%= i.label %> 
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-</p>
+<ul>
+  <li><strong>Item:</strong> <%= game_item.label %></li>
+  <li><strong>Equipped:</strong> <%= game_item.equipped? ? 'Yes' : 'No' %></li>
+  <li><strong>Weight:</strong> <%= game_item.weight %> lbs.</li>
+  <li><strong>Description:</strong> <%= game_item.description %></li>
+  <li><strong>Details:</strong> <%= game_item.details %></li>
+  <% if game_item.armor_modifier %>
+    <li><strong>Armor:</strong> <%= game_item.armor_modifier %></li>
+  <% end %>
+  <% if game_item.hit_damage %>
+    <li><strong>Damage:</strong> <%= game_item.hit_damage %></li>
+  <% end %>
+</ul>

@@ -9,7 +9,7 @@ class GameItemsController < ApplicationController
   end
 
   def show
-    abort(@item.to_json)
+    
   end
 
   def create
@@ -44,6 +44,7 @@ class GameItemsController < ApplicationController
 
   def get_resources
     @game = Game.find(params[:game_id])
+    @player = @game.player
     if params[:id]
       @game_item = GameItem.find(params[:id])
     end

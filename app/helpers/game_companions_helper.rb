@@ -1,0 +1,2 @@
+module GameCompanionsHelper
+end

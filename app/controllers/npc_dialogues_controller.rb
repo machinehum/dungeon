@@ -18,6 +18,7 @@ class NpcDialoguesController < ApplicationController
     @dialogue = NpcDialogue.find(params[:id])
     @npc = @dialogue.npc
     @game = Game.find(params[:game_id])
-    @game_encounterable = GameEncounterable.find_by(game_id: @game.id, encounterable_type: 'GameNpc', encounterable_id: @npc.id)
+    @game_npc = GameNpc.find_by(game_id: @game.id, npc_id: @npc.id)
+    @game_encounterable = GameEncounterable.find_by(game_id: @game.id, encounterable_type: 'GameNpc', encounterable_id: @game_npc.id)
   end
 end

@@ -1,0 +1,9 @@
+<% if shop_item.price > player.gold %>
+  <p>You can't afford the adoption fee.</p>
+<% else %>
+  <%= button_to shop_item.take_verb, [@game, @game_shop, shop_item], params: { outgoing: 1 },
+      form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
+<% end %>
+
+<%= button_to "(B)ack", game_game_shop_shop_inventory_index_path(@game, @game_shop), method: :get,
+    form_class: 'inline-block mr-3 mt-5', class: 'btn-primary', data: {turbo_stream: true} %> 

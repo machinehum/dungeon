@@ -4,7 +4,6 @@ class CreateCombats < ActiveRecord::Migration[8.0]
       t.references :game, null: false, foreign_key: true
       t.references :player, null: false, foreign_key: true
       t.references :game_npc, null: false, foreign_key: true
-      t.integer :initiative
       t.integer :player_damage
       t.integer :npc_damage
       t.boolean :resolved

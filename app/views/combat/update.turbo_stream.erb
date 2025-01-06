@@ -1,0 +1,9 @@
+<%= turbo_stream.update "description_pane", partial: "round", locals: { player_hits: @player_hits, npc_hits: @npc_hits, combatant: @game_npc.label, player_dead: @player.dead?, npc_dead: @game_npc.dead? } %>
+
+<% if @player.dead? %>
+  <%= turbo_stream.update "interaction_pane", partial: "player_dead", locals: { player: @player } %>
+<% end %>
+
+<% if @game_npc.dead? %>
+  <%= turbo_stream.update "interaction_pane", partial: "game_npc_dead", locals: { game_npc: @game_npc } %>
+<% end %>

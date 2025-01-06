@@ -1,0 +1,2 @@
+class Kinship < ApplicationRecord
+end

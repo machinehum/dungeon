@@ -38,6 +38,6 @@ private
   	id = params[:id] || params[:game_id]
   	@game = Game.find(id)
   	@node = @game.node
-  	@player = @game.player
+  	@player = Current.player
   end
 end

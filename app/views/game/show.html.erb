@@ -2,13 +2,13 @@
   <div class="pane description" id="description_pane">
     <%= render "description", game: @game, turn_description: @turn_description %>
   </div>
-  <div class="pane image" id="image_pane">
+  <div class="pane image row-span-2" id="image_pane">
   	<%= render "image", game: @game %>
   </div>
-</div>
 
-<div class="pane interaction" id="interaction_pane">
-  <%= render "interaction", game: @game, preface: @turn_preface, turn_options: @turn_options %>
+  <div class="pane interaction" id="interaction_pane">
+    <%= render "interaction", game: @game, preface: @turn_preface, turn_options: @turn_options %>
+  </div>
 </div>
 
 <div class="pane advisory clear-start" id="advisory_pane">
@@ -16,7 +16,8 @@
 </div>
 
 <div class="pane base_options clear-start" id="base_options_pane">
-  <ul>
+  <%= render 'shared/player_status' %>
+  <ul class="float-end">
     <li class='inline mr-5'>
       <%= button_to '(S)earch', game_game_encounterables_path(@game), method: :get, params: {observable: true},
        form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %>

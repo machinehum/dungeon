@@ -1,0 +1,19 @@
+<% unless player_hits.blank? %>
+  <p>
+  You hit <strong><%= combatant %></strong> <%= player_hits.compact.count %> times for <%= player_hits.compact&.sum %> damage!
+  </p>
+<% end %>
+
+<% unless npc_hits.blank? %>
+  <p>
+  <strong><%= combatant.capitalize %></strong> hits you <%= npc_hits.compact.count %> times for <%= npc_hits.compact&.sum %> damage!
+  </p>
+<% end %>
+
+<% if player_dead %>
+  <p>You have died!</p>
+<% end %>
+
+<% if npc_dead %>
+  <p>The <%= combatant %> has died!</p>
+<% end %>

@@ -1,0 +1,2 @@
+module ShopInventoryHelper
+end

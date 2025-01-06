@@ -1,3 +1,8 @@
 <p>
   <%= @turn_description %>
 </p>
+
+<% if @game.game_node.standalone? %>
+    <%= button_to "(E)nter #{@game.game_node.room.label}", [@game, @game.game_node.room], method: :get, 
+      form_class: 'inline-block mr-3 mt-5', class: 'btn-primary', data: {turbo_frame: '_top'} %> 
+<% end %>

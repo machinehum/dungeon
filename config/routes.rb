@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resource :session
+  resources :passwords, param: :token
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -12,12 +15,27 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   
+  resources :players do
+    member do
+      get "roll"
+    end
+  end
+
   resources :game do
     post :move
     resources :game_encounterables
     resources :npc_dialogues
     resources :game_items
     resources :game_npcs
-    resources :combat
+    resources :game_companions
+    resources :game_shops do
+      resources :shop_inventory
+    end
+    resources :rooms
+    resources :combat do
+      member do
+        get "run"
+      end
+    end
   end
 end

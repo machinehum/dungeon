@@ -1,0 +1,20 @@
+<div class="grid grid-cols-2">
+  <div class="pane description" id="description_pane">
+    <%= render "description", game_shop: @game_shop  %>
+  </div>
+  <div class="pane image row-span-2" id="image_pane">
+    <%= render "image", picture: @game_shop.picture %>
+  </div>
+
+  <div class="pane interaction" id="interaction_pane">
+    <%= render "interaction", game: @game, game_shop: @game_shop, preface: @turn_preface, turn_options: @turn_options %>
+  </div>
+</div>
+
+<div class="pane advisory clear-start" id="advisory_pane">
+   <%= render 'shared/advisory' %>
+</div>
+
+<div class="pane base_options clear-start" id="base_options_pane">
+  <%= render 'shared/player_status' %>
+</div>

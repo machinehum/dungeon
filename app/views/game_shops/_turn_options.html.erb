@@ -1,0 +1,8 @@
+<li class='clear-start float-start mb-8'>
+  <%= button_to "(M)eet available companions", game_game_shop_shop_inventory_index_path(@game, @game_shop), method: :get,
+    form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_stream: true} %> 
+</li>
+<li class='clear-start float-start mb-8'>
+  <%= button_to "(L)eave", @game, method: :get,
+    form_class: 'inline-block mr-3', class: 'btn-primary', data: {turbo_frame: '_top'} %> 
+</li>

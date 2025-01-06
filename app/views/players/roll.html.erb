@@ -1,0 +1,24 @@
+<div class="text-neutral-100">
+    <h1><%= @player.name %> is rolling stats</h1>
+
+    <div>
+    Roll: <span id="initial-roll"><%= @points_available %></span><br>
+    Unassigned: <span id="points-available"><%= @points_available %></span><br>
+    <div>
+
+    <div class="grid grid-cols-2 text-neutral-100">
+
+        <%= form_with model: @player do |form| %>
+          <% Character.base_stats.each do |s| %>
+            <div data-controller="statroll" data-statroll-base-value="<%= @player.kinship.send(s) %>" id="field_<%= s %>" class="m-5 p-3 border-2 border-amber-500 ring-4 ring-slate-500">
+              <%= form.label s, class: "inline-block mb-2 w-80" %>
+              <span><%= @player.kinship.send(s) %></span>
+              <button data-action="click->statroll#increment:prevent:stop" class="btn-primary">+</button>
+              <button data-action="click->statroll#decrement:prevent:stop" class="btn-primary">-</button>
+              <%= form.text_field s, value: @player.kinship.send(s), class: "text-black", data: { statroll_target: "value" } %>
+            </div>
+          <% end %>
+        <% end %>
+
+    </div>
+</div>

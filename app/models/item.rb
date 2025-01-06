@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :npc, optional: true
   has_many :pictures, as: :imageable
+  belongs_to :curse, optional: true
 
   def picture
     pictures&.first
