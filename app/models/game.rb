@@ -8,6 +8,13 @@ class Game < ApplicationRecord
 
   accepts_nested_attributes_for :game_encounterables
 
+  after_create :telebort
+
+  def telebort
+    self.game_node = GameNode.create(game: self, node: Node.find(1))
+    self.save!
+  end
+
   def shop?
     if game_node && game_node.game_shop
       return true

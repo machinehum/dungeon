@@ -1,24 +1,37 @@
 <div class="text-neutral-100">
-    <h1><%= @player.name %> is rolling stats</h1>
 
-    <div>
-    Roll: <span id="initial-roll"><%= @points_available %></span><br>
-    Unassigned: <span id="points-available"><%= @points_available %></span><br>
-    <div>
 
-    <div class="grid grid-cols-2 text-neutral-100">
-
-        <%= form_with model: @player do |form| %>
-          <% Character.base_stats.each do |s| %>
-            <div data-controller="statroll" data-statroll-base-value="<%= @player.kinship.send(s) %>" id="field_<%= s %>" class="m-5 p-3 border-2 border-amber-500 ring-4 ring-slate-500">
-              <%= form.label s, class: "inline-block mb-2 w-80" %>
-              <span><%= @player.kinship.send(s) %></span>
-              <button data-action="click->statroll#increment:prevent:stop" class="btn-primary">+</button>
-              <button data-action="click->statroll#decrement:prevent:stop" class="btn-primary">-</button>
-              <%= form.text_field s, value: @player.kinship.send(s), class: "text-black", data: { statroll_target: "value" } %>
-            </div>
-          <% end %>
-        <% end %>
-
+  <div class="m-4 grid grid-cols-2">
+    <div class="w-4/5 grid grid-cols-2">
+      Roll <span id="initial-roll" class="pl-3 bg-cyan-800 border-b-2 border-black"><%= @points_available %></span>
+      Unassigned <span id="points-available" class="pl-3 bg-cyan-800"><%= @points_available %></span>
     </div>
+  </div>
+
+
+
+    <%= form_with model: @player, url: roll_save_player_path, html: {class: "grid grid-cols-2"} do |form| %>
+      <div>
+      <% Character.base_stats.each do |s| %>
+        <div data-controller="statroll" data-statroll-base-value="<%= @player.kinship.send(s) %>" id="field_<%= s %>" class="w-4/5 m-3 p-3 border-2 border-amber-500">
+          <%= form.label s, class: "inline-block mb-2 w-60" %>
+          <span data-statroll-target="display" class="inline-block text-center w-10"><%= @player.kinship.send(s) %></span>
+          <span class="float-end">
+            <button data-action="click->statroll#increment:prevent:stop" data-statroll-target="incrementor" class="btn-primary btn-incrementor">+</button>
+            <button data-action="click->statroll#decrement:prevent:stop" data-statroll-target="decrementor" class="btn-primary btn-decrementor">-</button>
+          </span>
+          <%= form.hidden_field s, value: @player.kinship.send(s), class: "text-black", data: { statroll_target: "value" } %>
+        </div>
+      <% end %>
+      </div>
+      
+      <div>
+      <h1 class="mt-10 mb-10 pb-10 text-center text-6xl w-4/5 shadow-xl shadow-cyan-800 rounded-2xl"><%= @player.name %> is rolling stats</h1>
+      <%= form.submit "Save and Proceed", id: "save-stats", class: "btn btn-primary w-4/5", disabled: true %>
+      </div>
+    <% end %>
+
+    
+
+  </div>
 </div>

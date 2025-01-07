@@ -29,9 +29,22 @@ class PlayersController < ApplicationController
     @points_available = session[:last_stat_roll] = Dice.roll_stats
   end
 
+  def roll_save
+    @player = Player.find(params[:id])
+
+    # TODO Confirm assigned points match roll
+
+
+    respond_to do |format|
+      if @player.update! player_params
+        format.html { redirect_to @player.games.create! }
+      end
+    end
+  end
+
   private
 
   def player_params
-    params.expect(player: [:name, :description, :character_class_id, :kinship_id])
+    params.expect(player: [:name, :description, :character_class_id, :kinship_id, :vitality, :strength, :agility, :intelligence, :connectedness, :arcadia, :luck])
   end  
 end

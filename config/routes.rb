@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :players do
     member do
       get "roll"
+      patch "roll_save"
     end
   end
 
