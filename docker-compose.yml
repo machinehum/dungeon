@@ -10,6 +10,6 @@ services:
       - RAILS_ENV=${RAILS_ENV}
     ports:
       - "127.0.0.1:3000:3000"
-      - "192.168.68.74:3000:3000"
+      #- "192.xxx.xxx.xxx:3000:3000" --  IP address to expose for other machines on this LAN
 volumes:
   bundle_cache:
